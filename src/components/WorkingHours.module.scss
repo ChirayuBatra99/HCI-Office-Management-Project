@@ -1,0 +1,69 @@
+.App {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .ha {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .options {
+    margin-bottom: 20px;
+  }
+  
+  .button1 {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .datacontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .employeecontainer,
+  .projectcontainer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .employee-container h3,
+  .project-container h3 {
+    color: #007bff;
+  }
+  
+  ulu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  lis {
+    margin-top: 10px;
+  }
+  
+  .projectcontainer {
+    min-width: 300px;
+  }
+  

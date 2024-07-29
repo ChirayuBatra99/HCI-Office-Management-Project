@@ -1,4 +1,7 @@
-.App {
+*{
+  background-color: light-blue;
+}
+.app {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px auto;
@@ -6,6 +9,8 @@
     max-width: 800px;
     background-color: #f4f4f4;
     border-radius: 10px;
+    background-color: deeppink;
+
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   

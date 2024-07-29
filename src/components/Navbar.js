@@ -1,63 +1,70 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, IconButton } from '@mui/material'; // Assuming Material-UI is installed
+import { AppBar, Toolbar, Typography, IconButton } from '@mui/material';
+import { Home, Email, Event, AccessTime, Info } from '@mui/icons-material'; // Importing icons
 import { useNavigate } from "react-router-dom";
 
 const styles = {
   navbar: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    backgroundColor: '#2196f3', 
-    color: '#fff',
-    padding: '1rem',
-    borderRadius: '4px',
+    backgroundColor: '#1976d2', // Darker shade of blue
+    borderRadius: '0',
   },
   navLink: {
-    marginRight: '10rem',
-    fontSize: '1.1rem', 
-    fontWeight: 'bold',
+    color: '#fff',
     textDecoration: 'none',
+    margin: '0 1rem',
+    fontSize: '1.1rem',
+    fontWeight: 'bold',
     transition: 'color 0.3s ease-in-out',
 
     '&:hover': {
-      color: '#007bff', // Material-UI blue on hover
+      color: '#64b5f6', // Lighter shade of blue on hover
     },
   },
-  infoButton: {
-    color: '#fff', // White icon color
+  iconButton: {
+    color: '#fff',
+    marginLeft: 'auto', // Aligning icon to the right
   },
 };
 
 const Navbar = () => {
   const navigate = useNavigate();
 
-  const handleEmailClick =()=>{
-        navigate('/emails');
-  }
-  const handleMeetingsClick =()=>{
-        navigate('/');
-  }
-  const handleWork=()=>{
-    navigate('/workhours')
-  }
+  const handleEmailClick = () => {
+    navigate('/emails');
+  };
+
+  const handleMeetingsClick = () => {
+    navigate('/');
+  };
+
+  const handleWork = () => {
+    navigate('/workhours');
+  };
+
+  const handleHero = () => {
+    navigate('/home');
+  };
 
   return (
     <AppBar position="static" sx={styles.navbar}>
       <Toolbar>
-        <Typography variant="h6" noWrap component="div" sx={{ flexGrow: 1 }}>
+        <Typography variant="h6" noWrap component="div">
           Our Office
         </Typography>
-        <a href="#" onClick={handleEmailClick} className={styles.navLink}>
-          Emails
+        <a href="#" onClick={handleHero} className={styles.navLink}>
+          <Home />
         </a>
-        
+        <a href="#" onClick={handleEmailClick} className={styles.navLink}>
+          <Email />
+        </a>
         <a href="#" onClick={handleMeetingsClick} className={styles.navLink}>
-          Meetings
+          <Event />
         </a>
         <a href="#" onClick={handleWork} className={styles.navLink}>
-          Work Hours
+          <AccessTime />
         </a>
-        <IconButton sx={styles.infoButton}>
-          {/* Add desired icon component here */}
+        <IconButton sx={styles.iconButton}>
+          <Info />
         </IconButton>
       </Toolbar>
     </AppBar>
